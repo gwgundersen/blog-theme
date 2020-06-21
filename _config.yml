@@ -1,0 +1,15 @@
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+environment: prod
+url: "http://gregorygundersen.com"  # Sitemap base URL.
+plugins:
+  - jekyll-scholar
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-katex
+katex:
+  js_path: "assets"  # Path used to search for katex.min.js
+  rendering_options:
+    # Default KaTeX rendering options. See https://github.com/Khan/KaTeX#rendering-options
+    throw_error: false      # throwOnError - set to false if you want rendering to output error as text rather than a build error
+    error_color: "#cc0000"  # errorColor
