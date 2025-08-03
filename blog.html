@@ -1,0 +1,63 @@
+---
+title: blog
+---
+
+<html>
+<head>
+    <title>Ashraf Ahmed</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <meta name='description' content='Ashraf Ahmed is a researcher/engineer based in Toronto, Ontario, Canada.'>
+    <!-- A decent browser will parse this fine:
+         https://webmasters.stackexchange.com/questions/92744. -->
+    <meta name='keywords' content='
+        developmental interpretability,
+        active inference,
+        representations,
+        information integration,
+        singular learning theory,
+        bayesian inference,
+        probability theory
+    '>
+    <meta name='author' content='Ashraf Ahmed'>
+
+    <link rel='shortcut icon' href='/favicon.png?v=e' />
+    <link href='/css/blog.css' rel='stylesheet'/>
+
+    {% include mathjax.html %}
+</head>
+<body>
+    {% include nav.html %}
+    <div id='blog' class='wrap'>
+        <div id='intro'>
+            <div class='quote'>
+                <p>An agent does not have a model of its world - it is a model. In other words, the form, structure, and states of our embodied brains do not contain a model of the sensorium - they are that model. Every aspect of our brain and body can be predicted from our environment</p>
+                <a href='https://en.wikipedia.org/wiki/Karl_J._Friston' target='_blank'>Karl J. Friston</a>
+            </div>
+        </div>
+        <div id='posts' class='section'>
+            {% for post in site.posts %}
+                <div class='post-row'>
+                    <p class='post-title'>
+                        <a href="{{ post.url }}">
+                            {% katexmm %}
+                            {{ post.title }}
+                            {% endkatexmm %}
+                        </a>
+                    </p>
+                    <p class='post-date'>
+                        {{ post.date | date_to_long_string }}
+                    </p>
+                </div>
+                <p class='post-subtitle'>
+                    {% katexmm %}
+                    {{ post.subtitle }}
+                    {% endkatexmm %}
+                </p>
+                <span class='hidden'>{{ forloop.index }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

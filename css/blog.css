@@ -42,6 +42,31 @@ h1 {
 .mono {
   font-family: monospace;
 }
+#landing {
+	max-width: 700px;
+	margin: 119px auto;
+}
+#landing ul#links {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0 0 20px 0;
+}
+#landing ul#links li {
+	font-family: -apple-system, helvetica, arial, sans-serif;
+	margin-right: 25px;
+	padding-bottom: 5px;
+}
+#landing ul#links li a:hover {
+	text-decoration: none;
+}
+#landing ul#links li#contact {
+	font-family: courier;
+	margin: 0;
+	padding-top: 5px;
+}
+#landing .section ul {
+	padding-left: 15px;
+}
 .nav {
   margin-top: 15px;
   margin-bottom: 15px;

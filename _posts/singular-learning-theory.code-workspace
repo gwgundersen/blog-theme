@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../singular-learning-theory"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
